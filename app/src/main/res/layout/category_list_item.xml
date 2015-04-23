@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:id="@+id/category_name_tv"
+    android:gravity="start|center"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:paddingLeft="@dimen/list_item_padding_left"
+    android:background="@color/light_gray">
+
+</TextView>

@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_view_height"
+            android:layout_weight="1"
+            android:id="@+id/categories_search_tf"
+            android:background="@drawable/white_rounded_rectangle"
+            android:singleLine="true"
+            android:inputType="textCapWords"
+            android:imeOptions="actionSearch"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/search_text"
+            android:id="@+id/category_search_button"
+            android:background="@drawable/blue_rounded_rectangle"
+            />
+
+    </LinearLayout>
+
+    <ListView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/category_list"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/divider_height"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/categories_progress_layout">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/categories_list_pb"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pb_text_padding"
+            android:text="@string/fetching_categories"
+            android:id="@+id/categories_empty_tv"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

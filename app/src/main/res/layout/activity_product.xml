@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.misaal.pricecomparator.activities.ProductActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_view_height"
+            android:layout_weight="1"
+            android:id="@+id/product_search_tf"
+            android:background="@drawable/white_rounded_rectangle"
+            android:singleLine="true"
+            android:inputType="textCapWords"
+            android:imeOptions="actionSearch"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/search_text"
+            android:id="@+id/product_search_button"
+            android:background="@drawable/blue_rounded_rectangle"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/product_list_title_height"
+        android:id="@+id/product_name_tv"
+        android:gravity="start|center"
+        android:text="Samsung Galaxy S2"
+        android:paddingLeft="@dimen/list_item_padding_left"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:layout_width="@dimen/product_image_dimension"
+            android:layout_height="@dimen/product_image_dimension"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/product_image_margin"
+            android:id="@+id/product_big_image_iv"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/product_list_title_height"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/list_item_padding_left"
+        android:gravity="left|center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best Price"
+            android:id="@+id/product_best_price_tv"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available at :"
+            android:id="@+id/product_no_of_stores_tv"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/product_stores_lv"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/divider_height"
+        android:background="@android:color/white"
+        android:paddingTop="@dimen/divider_height"
+        />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_margin="@dimen/pb_text_padding"
+            android:text="@string/no_stores"
+            android:id="@+id/stores_empty_tv"
+            android:background="@android:color/white"/>
+
+</LinearLayout>
